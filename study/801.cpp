@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int n, m;
+    cin >> n;
+
+    for (int i = 0; i < n; i++) {
+        cin >> m;
+
+        int count = 0;
+        while (m) {
+            m -= m & -m;
+            count++;
+        }
+        cout << count << ' ';
+    }
+
+    return 0;
+}
